@@ -1,0 +1,16 @@
+<import src="/pages/search/movie-grid/movie-grid-template.wxml"/>
+<view class="search">
+    <icon type="search" size="13" color="#405f80" class="search-img"></icon>
+    <input type="text" placeholder="请输入要查询的电影名!" placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onBindBlur" value="{{chaXun}}"/>
+    <image src="/images/icon/xx.png" bindtap="onCanceImgTap" class="xx-img" wx:if="{{searchPanelShow}}"></image>
+</view>
+<view class="container" wx:if="{{containerShow}}">
+   <text class="caption">热门搜索</text>
+   <view class='hot'>
+        <text wx:for="{{datas}}" wx:for-item="data" class='hotText' bindtap='hotSreach' data-text="{{data}}">{{data}}</text>
+   </view>
+</view>
+
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+    <template is="movieGridTemplate" data="{{...searchResult}}"></template>
+</view>

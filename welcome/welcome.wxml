@@ -1,0 +1,9 @@
+<!--welcome/welcome.wxml-->
+<view class="container">
+    <image src="{{userAvatar}}" class="avatarImg"></image>
+    <text class='welText' wx:if='{{userName}}'>{{userName}},欢迎来到WSM</text>
+    <text class='welText' wx:else>亲爱的游客,欢迎来到WSM</text>
+    <view bindtap="goToHome" class='btn-container'>
+        <text class='btn'>开启我的电影之旅</text>
+    </view>
+</view>

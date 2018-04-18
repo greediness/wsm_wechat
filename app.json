@@ -1,0 +1,39 @@
+{
+    "pages": [
+        "welcome/welcome",
+        "pages/my/my",
+        "pages/search/search",
+        "pages/movies/movies",
+        "pages/search/movie-detail/movie-detail",
+        "pages/movies/movie-detail/movie-detail",
+        "pages/movies/more-movie/more-movie"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#405f80",
+        "enablePullDownRefresh":true
+    },
+    "tabBar": {
+        "color": "black",
+        "selectedColor": "blue",
+        "list": [
+            {
+                "pagePath": "pages/movies/movies",
+                "text": "电影",
+                "iconPath": "/images/tab/dianying.png",
+                "selectedIconPath": "/images/tab/dianying_hl.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "搜索",
+                "iconPath": "/images/tab/search.png",
+                "selectedIconPath": "/images/tab/search_hl.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "联系我们",
+                "iconPath": "/images/tab/people.png",
+                "selectedIconPath": "/images/tab/people_hl.png"
+            }
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+<view class='container'>
+    <view wx:if="{{userName}}" class='callWe'>
+        <image src='{{userAvatar}}' class='avatarImg'></image>
+        <text class='callWeText'>{{userName}},感谢您对我们小程序的使用</text>
+        <form bindsubmit="bindFormSubmit">
+            <textarea placeholder="请提交您宝贵的意见！" class='textArea' name="textarea" value="{{sub}}" maxlength='-1'></textarea>
+            <button class='btn' form-type="submit">提交意见</button>
+        </form>
+        <view class='hr'></view>
+        <view class='pay'>
+            <text class='payText'>您的支持是对我们最大的鼓励！</text>
+            <text class='payText'>扫码支持我们！</text>
+            <image bindtap="previewImage" src='{{scene}}' class='payImg'></image>
+        </view>
+        <text>微信小程序个人运营用户@盗版必究！</text>
+    </view>
+
+    <view bindtap='goLogin' wx:else class='callWe'>
+        <image></image>
+        <text class='callWeTextTwo'>尊敬的游客，请先登录，点此登录可联系我们...</text>
+    </view>
+</view>
